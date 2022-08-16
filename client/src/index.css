@@ -20,3 +20,47 @@ li a {
 .navbar-nav li {
   padding-left: 20px;
 }
+#login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: darkcyan;
+  align-items: center;
+  height: 100vh;
+}
+#register-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: darkcyan;
+  align-items: center;
+  height: 100vh;
+}
+.form-detail{
+  padding: 20px;
+  height: 380px;
+  background: rgb(255, 255, 255);
+}
+.form-detail h1{
+  text-align: center;
+  padding: 10px;
+}
+.form-detail input{
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+  border: none;
+  border-bottom: 1px solid rgb(165, 165, 165);
+}
+#btn{
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+h4{
+  text-align: center;
+  padding: 10px;
+}

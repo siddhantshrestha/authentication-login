@@ -1,5 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 function Login() {
   const [email, setEmail] = useState("")
@@ -24,24 +25,28 @@ function Login() {
   return (
     <div className='App'>
       <form id='login-form' onSubmit={LoginUser}>
-        <h1>Login</h1>
+       <div className="form-detail">
+       <h1>Login</h1>
 
-        <input
-          type='email'
-          placeholder='Email'
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-        />
-        <br />
+<input
+  type='email'
+  placeholder='Email'
+  value={email}
+  onChange={e => setEmail(e.target.value)}
+/>
+<br />
 
-        <input
-          type='password'
-          placeholder='Password'
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-        />
-        <br />
-        <input type='submit' value='Login' />
+<input
+  type='password'
+  placeholder='Password'
+  value={password}
+  onChange={e => setPassword(e.target.value)}
+/>
+<br />
+<input id='btn' type='submit' value='Login' />
+<h4>Need an account? <Link to={'/register'}>Sign Up</Link></h4>
+       </div>
+
       </form>
     </div>
   )

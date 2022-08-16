@@ -42,8 +42,6 @@ app.post("/api/login", async (req, res) => {
   } else {
     return res.json({ status: "error", data: false })
   }
-
-
 })
 
 app.listen(8000, () => {

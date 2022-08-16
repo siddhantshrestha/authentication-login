@@ -1,6 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 function Register() {
   const [name, setName] = useState("")
@@ -26,31 +26,35 @@ function Register() {
   return (
     <div className='App'>
       <form id='register-form' onSubmit={registerUser}>
-        <h1>Register</h1>
+       <div className="form-detail">
+       <h1>Register</h1>
 
-        <input
-          type='text'
-          placeholder='Name'
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
-        <br />
-        <input
-          type='email'
-          placeholder='Email'
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-        />
-        <br />
+<input
+  type='text'
+  placeholder='Name'
+  value={name}
+  onChange={e => setName(e.target.value)}
+/>
+<br />
+<input
+  type='email'
+  placeholder='Email'
+  value={email}
+  onChange={e => setEmail(e.target.value)}
+/>
+<br />
 
-        <input
-          type='password'
-          placeholder='Password'
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-        />
-        <br />
-        <input type='submit' value='Register' />
+<input
+  type='password'
+  placeholder='Password'
+  value={password}
+  onChange={e => setPassword(e.target.value)}
+/>
+<br />
+<input id='btn' type='submit' value='Register' />
+<h4>Already have an account? <Link to={'/login'}>Sign In</Link></h4>
+
+       </div>
       </form>
     </div>
   )
