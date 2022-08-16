@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  background-color: rgb(233, 233, 233);
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+.navbar-nav {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+li a {
+  color: rgb(17, 17, 17);
+}
+.navbar-nav li {
+  padding-left: 20px;
+}
